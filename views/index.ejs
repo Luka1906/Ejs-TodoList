@@ -1,0 +1,25 @@
+<%- include ("partials/header.ejs") %>
+
+<div class="list-container">
+    <div class="header">
+        <h2 class="list-header"><%= day %></h2>
+    </div>
+    <form method="post" action="/" id="new-task-form">
+        <input class="new-task-input" name="task"  placeholder="Add new task" required/>
+        <button  class="add-task-btn">+</button>
+    </form>
+    <ol class="task-list">
+        <% if(locals.tasks) {
+            tasks.forEach(task => {%>
+                <li class="tasks"><%= task %></li>
+          
+            <%});
+        }%>
+
+    </ul>
+   
+</div>
+
+
+
+<%- include ("partials/footer.ejs") %>
