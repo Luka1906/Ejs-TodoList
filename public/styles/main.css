@@ -1,19 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", "sans-serif";
+}
+body {
+  color:#313131
+}
+
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
 }
 
 .list-container {
-  border: 1px solid black;
-  height: 70%;
+
+  background: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.50);
+  height: 80%;
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
 }
 
 .header {
@@ -22,7 +40,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: #f96060;
 }
 #new-task-form {
   width: 90%;
@@ -36,9 +56,10 @@
 .new-task-input {
   width: 85%;
   border-radius: 1.5rem;
-  border: 1px solid rgb(115, 115, 115);
+  border: none;
   padding: 0.8rem;
   outline: none;
+  background: rgb(230, 230, 230)
 }
 
 .add-task-btn {
@@ -48,21 +69,79 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  background: rgb(230, 230, 230)
 }
 
 .task-list {
-    display: flex;
-    width: 90%;
-    position: relative;
-    bottom: 2rem;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.4rem;
+  display: flex;
+  width: 90%;
+  position: relative;
+  bottom: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.task-container {
+  display: flex;
+  justify-content:space-between;
+  gap:0.3rem
 }
 
 .task-list li {
-    width: inherit;
-    border-bottom: 1px solid rgb(115, 115, 115);
+  width: inherit;
+  list-style:circle;
+  background: transparent;
+}
 
+.delete-btn {
+  border: none;
+  color: #6074f9;
+  cursor: pointer;
+
+}
+
+.footer {
+  position: absolute;
+  bottom: 5rem;
+}
+
+.delete-all-btn {
+  border: none;
+  background: #6074f9;
+  font-weight: 600;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  color:rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  background: #6074f9;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  height: 10vh;
  
+}
+.nav-items {
+  margin-right: 1.5rem;
+}
+
+.nav-items a {
+  text-decoration: none;
+
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 }

@@ -1,8 +1,9 @@
 <%- include ("partials/header.ejs") %>
-
+<main class="main">
 <div class="list-container">
     <div class="header">
         <h2 class="list-header"><%= day %></h2>
+        
     </div>
     <form method="post" action="/" id="new-task-form">
         <input class="new-task-input" name="task"  placeholder="Add new task" required/>
@@ -11,14 +12,25 @@
     <ol class="task-list">
         <% if(locals.tasks) {
             tasks.forEach(task => {%>
-                <li class="tasks"><%= task %></li>
+                <div class="task-container">
+                    <li class="tasks"><%= task %></li>
+                    <a class="delete-btn"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+               
           
             <%});
         }%>
 
-    </ul>
+    </ol>
+    <div class="footer"> 
+        <form method="post" action="/delete">
+            <button class="delete-all-btn">Delete All</button>
+            </form>
+      
+        </div>
    
 </div>
+</main>
 
 
 
