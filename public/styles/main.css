@@ -95,7 +95,12 @@ body {
   background: transparent;
 }
 
-.delete-btn {
+.list-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.delete-btn, .edit-btn {
   border: none;
   color: #6074f9;
   cursor: pointer;

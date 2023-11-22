@@ -11,10 +11,14 @@
     </form>
     <ol class="task-list">
         <% if(locals.tasks) {
-            tasks.forEach(task => {%>
-                <div class="task-container">
+            tasks.forEach((task, i) => {%>
+                <div class="task-container" id="<%=i%>">
                     <li class="tasks"><%= task %></li>
-                    <a class="delete-btn"><i class="fa-solid fa-trash"></i></a>
+                    <div class="list-icons">
+                        <a href="/<%=i%>" class="delete-btn"><i class="fa-solid fa-trash trash-icon"></i></a>
+                       <a href="/edit/<%=i%>" class="edit-btn"><i class="fa-solid fa-pen-to-square "></i></a> 
+                        </div>
+                   
                     </div>
                
           
