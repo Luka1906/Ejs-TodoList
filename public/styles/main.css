@@ -53,6 +53,11 @@ body {
   gap: 1rem;
 }
 
+#new-task-form button {
+  font-size:32px;
+  color:#f96060
+}
+
 .new-task-input {
   width: 85%;
   border-radius: 1.5rem;
@@ -91,7 +96,7 @@ body {
 
 .task-list li {
   width: inherit;
-  list-style:circle;
+  list-style: none;
   background: transparent;
 }
 
@@ -122,6 +127,48 @@ body {
   cursor: pointer;
 }
 
+/* Edit-Form Page */
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 80vh;
+  width: 100vw;
+
+}
+
+.editForm h2 {
+  color: #f96060;
+}
+
+.edit-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.edit-task-form input {
+ width: 400px;
+ padding: 0.5rem 0.5rem;
+ border-radius: 1rem;
+ border: 1px solid #313131;
+ outline:none
+}
+.edit-task-form button {
+  width: 40%;
+  padding: 0.4rem 0.4rem;
+  border:none;
+ border-radius: 0.8rem;
+ background-color:#6074f9;
+ text-transform: uppercase;
+ color:rgb(230, 230, 230);
+ font-weight: 600;
+}
+
 /* Navigation */
 
 nav {
@@ -139,6 +186,9 @@ nav {
 
 .nav-items a {
   text-decoration: none;
+  color:#313131;
+  font-weight: 500;
+
 
 }
 
@@ -150,3 +200,4 @@ nav {
   align-items: center;
   height: 10vh;
 }
+

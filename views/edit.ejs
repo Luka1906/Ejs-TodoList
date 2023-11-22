@@ -1,7 +1,8 @@
 <%- include ("partials/header.ejs") %>
-<div>
-<form action="/edit-post" method="post" >
-    <input value="<%=editTask%>" />
+<div class="editForm">
+    <h2>Edit Task</h2>
+<form class="edit-task-form" action="/edit-post/<%=editId%>" method="post" >
+    <input value="<%=editTask%>" name="newTask" />
     <button>Edit</button>
 </form>
 </div>
