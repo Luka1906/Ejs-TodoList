@@ -7,7 +7,7 @@
   font-family: "Raleway", "sans-serif";
 }
 body {
-  color:#313131
+  color: #313131;
 }
 
 .main {
@@ -16,18 +16,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   position: relative;
-
 }
 
 .list-container {
-
   background: whitesmoke;
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.50);
-  height: 80%;
-  width: 30%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  height: 33rem;
+  width: 23rem;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -54,8 +54,8 @@ body {
 }
 
 #new-task-form button {
-  font-size:32px;
-  color:#f96060
+  font-size: 32px;
+  color: #f96060;
 }
 
 .new-task-input {
@@ -64,7 +64,7 @@ body {
   border: none;
   padding: 0.8rem;
   outline: none;
-  background: rgb(230, 230, 230)
+  background: rgb(230, 230, 230);
 }
 
 .add-task-btn {
@@ -74,30 +74,37 @@ body {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  background: rgb(230, 230, 230)
+  background: rgb(230, 230, 230);
 }
 
 .task-list {
   display: flex;
   width: 90%;
-  position: relative;
+  height: 50%;
   bottom: 1rem;
   flex-direction: column;
-  justify-content: flex-start;
+
   gap: 1rem;
-  padding: 0 1rem;
+
+  overflow: scroll;
+
 }
 
 .task-container {
   display: flex;
-  justify-content:space-between;
-  gap:0.3rem
+  justify-content: space-between;
+  gap: 0.3rem;
+  border: 1px solid #6074f9;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+
+
+   
 }
 
 .task-list li {
   width: inherit;
   list-style: none;
-  background: transparent;
 }
 
 .list-icons {
@@ -105,17 +112,19 @@ body {
   gap: 0.8rem;
 }
 
-.delete-btn, .edit-btn {
+.delete-btn,
+.edit-btn {
   border: none;
   color: #6074f9;
   cursor: pointer;
-
 }
 
 .footer {
   position: absolute;
-  bottom: 5rem;
+  bottom: 1rem;
 }
+
+
 
 .delete-all-btn {
   border: none;
@@ -123,8 +132,10 @@ body {
   font-weight: 600;
   padding: 0.6rem;
   border-radius: 0.5rem;
-  color:rgb(230, 230, 230);
+  color: rgb(230, 230, 230);
   cursor: pointer;
+  text-transform: uppercase;
+
 }
 
 /* Edit-Form Page */
@@ -137,7 +148,17 @@ body {
   gap: 2rem;
   height: 80vh;
   width: 100vw;
+}
 
+.edit-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.edit-icon {
+  color: #f96060;
+  font-size: 22px;
 }
 
 .editForm h2 {
@@ -152,21 +173,21 @@ body {
 }
 
 .edit-task-form input {
- width: 400px;
- padding: 0.5rem 0.5rem;
- border-radius: 1rem;
- border: 1px solid #313131;
- outline:none
+  width: 400px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid #313131;
+  outline: none;
 }
 .edit-task-form button {
   width: 40%;
   padding: 0.4rem 0.4rem;
-  border:none;
- border-radius: 0.8rem;
- background-color:#6074f9;
- text-transform: uppercase;
- color:rgb(230, 230, 230);
- font-weight: 600;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #6074f9;
+  text-transform: uppercase;
+  color: rgb(230, 230, 230);
+  font-weight: 600;
 }
 
 /* Navigation */
@@ -178,18 +199,21 @@ nav {
   align-items: center;
   gap: 1rem;
   height: 10vh;
- 
 }
 .nav-items {
   margin-right: 1.5rem;
+  color: #313131;
 }
 
 .nav-items a {
   text-decoration: none;
-  color:#313131;
-  font-weight: 500;
+  color: #313131;
+  font-weight: 600;
+}
 
-
+.vector-image {
+  width: 50%;
+  height: 85%
 }
 
 /* Footer */
@@ -199,5 +223,14 @@ nav {
   justify-content: center;
   align-items: center;
   height: 10vh;
+}
+
+@media (max-width: 768px) {
+  .list-container {
+    height: 29rem;
+    width: 19rem;
+  }
+
+ 
 }
 

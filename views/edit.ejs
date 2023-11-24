@@ -1,6 +1,10 @@
 <%- include ("partials/header.ejs") %>
 <div class="editForm">
-    <h2>Edit Task</h2>
+    <div class="edit-title">
+        <h2>Edit Task</h2>
+        <i class="fa-solid fa-pen-to-square edit-icon "></i>
+    </div>
+  
 <form class="edit-task-form" action="/edit-post/<%=editId%>" method="post" >
     <input value="<%=editTask%>" name="newTask" />
     <button>Edit</button>
