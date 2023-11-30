@@ -59,8 +59,7 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const { task } = req.body;
-
-  tasks.unshift(task);
+   tasks.unshift(task);
 
   res.render("index.ejs", { tasks: tasks, day: day, year: year });
 });
@@ -69,7 +68,7 @@ app.post("/delete", (req, res) => {
   tasks = [];
   res.render("index.ejs", { tasks: tasks, day: day, year: year });
 });
-// Edit Page
+// // Edit Page
 
 app.get("/edit/:id", (req, res) => {
   const { id } = req.params;

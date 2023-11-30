@@ -31,7 +31,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
 }
 
 .header {
@@ -87,7 +86,6 @@ body {
   gap: 1rem;
 
   overflow: scroll;
-
 }
 
 .task-container {
@@ -97,9 +95,6 @@ body {
   border: 1px solid #6074f9;
   border-radius: 0.5rem;
   padding: 0.4rem;
-
-
-   
 }
 
 .task-list li {
@@ -124,8 +119,6 @@ body {
   bottom: 1rem;
 }
 
-
-
 .delete-all-btn {
   border: none;
   background: #6074f9;
@@ -135,7 +128,6 @@ body {
   color: rgb(230, 230, 230);
   cursor: pointer;
   text-transform: uppercase;
-
 }
 
 /* Edit-Form Page */
@@ -213,7 +205,7 @@ nav {
 
 .vector-image {
   width: 50%;
-  height: 85%
+  height: 85%;
 }
 
 /* Footer */
@@ -223,14 +215,29 @@ nav {
   justify-content: center;
   align-items: center;
   height: 10vh;
+ text-align: center;
 }
+
+/* Media Queries */
 
 @media (max-width: 768px) {
-  .list-container {
-    height: 29rem;
-    width: 19rem;
+
+  nav {
+    justify-content: center;
+    gap: 0;
   }
 
- 
+  .vector-image {
+    display: none;
+  }
 }
 
+@media (max-width: 576px) {
+.list-container {
+  width: 20rem;
+  height: 30rem;
+}
+#footer {
+  font-size: 0.85rem;
+}
+}
